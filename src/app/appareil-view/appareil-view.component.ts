@@ -9,14 +9,13 @@ import { AppareilService } from '../services/appareil.service';
 export class AppareilViewComponent implements OnInit {
 
   appareils: any[];
-  isAuth: boolean;
+  isAuth: boolean=false;
 
   lastUpdate = new Promise((resolve, reject) => {
     const date = new Date();
     setTimeout(
       () => {
         resolve(date);
-        this.isAuth = true;
       }, 2000
     );
   });
