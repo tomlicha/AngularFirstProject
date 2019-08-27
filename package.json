@@ -19,8 +19,9 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "rxjs": "~6.4.0",
+    "rxjs-compat": "^6.5.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },

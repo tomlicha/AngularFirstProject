@@ -1,6 +1,10 @@
+import { Subject } from 'rxjs/Subject';
 
 export class AppareilService {
-    appareils = [
+
+  appareilsSubject = new Subject<any[]>();
+ 
+  private appareils = [
         {
           id:1,
           name: 'Machine à laver',
@@ -16,31 +20,54 @@ export class AppareilService {
           name: 'Ordinateur',
           status: 'éteint'
         }
-    ];
-    switchOnAll() {
-        for(let appareil of this.appareils) {
-          appareil.status = 'allumé';
-        }
+  ];
+
+  switchOnAll() {
+      for(let appareil of this.appareils) {
+        appareil.status = 'allumé';
       }
-    
-    switchOffAll() {
-        for(let appareil of this.appareils) {
-        appareil.status = 'éteint';
+      this.emitAppareilSubject();
+    }
+  
+  switchOffAll() {
+      for(let appareil of this.appareils) {
+      appareil.status = 'éteint';
+      this.emitAppareilSubject();
+      }
+  }
+  switchOnOne(i: number) {
+      this.appareils[i].status = 'allumé';
+      this.emitAppareilSubject();
+}
+  
+  switchOffOne(i: number) {
+      this.appareils[i].status = 'éteint';
+      this.emitAppareilSubject();
+}
+  
+  getAppareilById(id: number) {
+      const appareil = this.appareils.find(
+        (s) => {
+          return s.id === id;
         }
-    }
-    switchOnOne(i: number) {
-        this.appareils[i].status = 'allumé';
-    }
-    
-    switchOffOne(i: number) {
-        this.appareils[i].status = 'éteint';
-    }
-    getAppareilById(id: number) {
-        const appareil = this.appareils.find(
-          (s) => {
-            return s.id === id;
-          }
-        );
-        return appareil;
-    }
+      );
+      return appareil;
+  }
+  
+  emitAppareilSubject() {
+    this.appareilsSubject.next(this.appareils.slice());
+  }
+
+  addAppareil(name: string, status: string){
+    const appareilObject = {
+      id: 0,
+      name: '', 
+      status: ''
+    };
+    appareilObject.name = name;
+    appareilObject.status = status;
+    appareilObject.id = this.appareils[(this.appareils.length - 1)].id +1;
+    this.appareils.push(appareilObject);
+    this.emitAppareilSubject();
+  }
 }
