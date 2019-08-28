@@ -21,14 +21,15 @@ import { UserListComponent } from './user-list/user-list.component';
 import { NewUserComponent } from './new-user/new-user.component';
 
 const appRoutes: Routes = [
-  { path: 'appareils', component: AppareilViewComponent },
-  { path: 'appareils/:id',  canActivate: [AuthGuard], component: SingleAppareilComponent },
+  { path: 'appareils', canActivate: [AuthGuard], component: AppareilViewComponent },
+  { path: 'appareils/:id', canActivate: [AuthGuard], component: SingleAppareilComponent },
+  { path: 'edit', canActivate: [AuthGuard], component: EditAppareilComponent },
   { path: 'auth', component: AuthComponent },
-  { path: 'edit', canActivate: [AuthGuard], component: EditAppareilComponent},
   { path: 'users', component: UserListComponent },
   { path: '', component: AppareilViewComponent },
   { path: 'not-found', component: FourOhFourComponent },
-  { path: '**', redirectTo: 'not-found' }
+  { path: 'new-user', component: NewUserComponent },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 @NgModule({
