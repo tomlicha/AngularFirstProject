@@ -2,7 +2,9 @@ import { User } from '../models/User.model';
 import { Subject } from 'rxjs/Subject';
 
 export class UserService {
-  private users: User[];
+  private users: User[] = [
+    new User('Will', 'Alexander', 'will@will.com', 'jus d\'orange', ['coder', 'boire du café'])
+];
   userSubject = new Subject<User[]>();
 
   emitUsers() {
@@ -11,6 +13,8 @@ export class UserService {
 
   addUser(user: User) {
     this.users.push(user);
+    console.log(this.users);
+
     this.emitUsers();
   }
 }
