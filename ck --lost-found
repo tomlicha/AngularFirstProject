@@ -1,0 +1,59 @@
+[33mcommit 1ae6021ec56ac79343fa6eac9cd7a54d97bc482e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Thu Aug 29 09:42:45 2019 +0200
+
+    adding firebase interaction
+
+[33mcommit 744e55140019bb800b4783dc9cd2532a4a6fe37c[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Thu Aug 29 09:21:29 2019 +0200
+
+    fixing add user errors
+
+[33mcommit 525be3e95c516a545fac759cffdbbbc486cd85ab[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Wed Aug 28 16:54:32 2019 +0200
+
+    reactive forms
+
+[33mcommit 12346aa14a1c2643f96c18a9f1141ca3777a8507[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Tue Aug 27 14:48:16 2019 +0200
+
+    adding user form, observers, new device menu
+
+[33mcommit 0c4892d411071029b60cf1e67f76f58f57d2a0ba[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Sun Aug 25 14:07:40 2019 +0200
+
+    adding details routing
+
+[33mcommit 454da636fce317d83aa8adc276ff27d4b8f22a88[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Sat Aug 24 19:11:18 2019 +0200
+
+    adding services
+
+[33mcommit 085e63afc7d4efb91c3094390843ac1fa317786e[m
+Author: tom licha <tomylicha@hotmail.fr>
+Date:   Sat Aug 24 14:01:05 2019 +0200
+
+    finished first exercise of openclassroom tutorial
+
+[33mcommit ab67ac5bb4ee97f6c790ee6680818e6aab405b73[m
+Author: tomlicha <tomylicha@hotmail.fr>
+Date:   Fri Aug 23 13:52:35 2019 +0200
+
+    adding new stuff
+
+[33mcommit 928c30cbd70776f0bc2c78395d9e6f4d3685df4c[m
+Author: tomlicha <tomylicha@hotmail.fr>
+Date:   Fri Aug 23 12:32:35 2019 +0200
+
+    First commit
+
+[33mcommit 450a609cc40012df3be2e91a64d8b5728ad429ae[m
+Author: tomlicha <tomylicha@hotmail.fr>
+Date:   Fri Aug 23 10:13:51 2019 +0200
+
+    initial commit
