@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="row">
+  
+      <div class="col-xs-12">
+  
+        <h2>Posts</h2>
+        <p>Mis à jour : {{ lastUpdate | async | date: 'y MMMM EEEE d' | uppercase }}</p>
+        <ul class="list-group">
+  
+          <app-post  *ngFor="let post of posts"
+  
+                        [post] = "post"></app-post>
+  
+        </ul>
+        
+      </div>
+  
+    </div>
+  
+  </div>
